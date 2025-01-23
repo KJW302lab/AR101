@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/02Raycast.unity
-    guid: 14ed0bac9cc324780bdf65946f834e81
+    path: Assets/Scenes/03 ARInteractable.unity
+    guid: d4fbdd8b9541545e4ac97c3293e0e567
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f17f5450c6d6e41ff83b81f39026f79f, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 07f1af63b2fa94b62ac56a26e1cdefc7, type: 2}
