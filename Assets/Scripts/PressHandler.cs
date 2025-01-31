@@ -6,6 +6,7 @@ public class PressHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 {
     [SerializeField] private UnityEvent onPressed;
     [SerializeField] private UnityEvent onReleased;
+    [SerializeField] private UnityEvent onPressStay;
 
     private bool _pressed = false;
 
@@ -13,17 +14,18 @@ public class PressHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public void OnPointerDown(PointerEventData eventData)
     {
         _pressed = true;
+        onPressed?.Invoke();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         _pressed = false;
-        onReleased.Invoke();
+        onReleased?.Invoke();
     }
 
     private void Update()
     {
         if (_pressed)
-            onPressed.Invoke();
+            onPressStay?.Invoke();
     }
 }
