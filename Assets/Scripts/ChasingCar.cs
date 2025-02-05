@@ -26,4 +26,12 @@ public class ChasingCar : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, trackingPosition, Time.deltaTime * _speed);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Package package = other.GetComponent<Package>();
+
+        if (package != null)
+            Destroy(package.gameObject);
+    }
 }
